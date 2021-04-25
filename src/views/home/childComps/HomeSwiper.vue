@@ -2,7 +2,8 @@
   <swiper>
     <swiper-item v-for="(item, index) in banners" :key="index">
       <a :href="item.link">
-        <img :src="item.image" alt="">
+        <!-- @load="imageLoad" -->
+        <img :src="item.image" alt="" >
       </a>
     </swiper-item>
   </swiper>
@@ -23,10 +24,24 @@ export default {
       }
     }
   },
+  data() {
+    return {
+      // isLoad: fslae
+    }
+  },
   components: {
     Swiper,
     SwiperItem
-  }
+  },
+  // methods: {
+  //   // 发送一次轮播图的一张图片加载完成事件
+  //   imageLoad() {
+  //     if(!isLoad) {
+  //       this.$emit('swiperImageLoad')
+  //       this.isLoad = true
+  //     }
+  //   }
+  // }
 }
 </script> 
 
