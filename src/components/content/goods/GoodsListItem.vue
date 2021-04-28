@@ -23,7 +23,9 @@ export default {
   },
   // 图片加载完成发射到事件总线
   methods: {
+    // 监听图片加载完成
     imageLoad() {
+      // console.log('imageload')
       this.$bus.$emit('itemImageLoad')
     },
     itemClick() {
